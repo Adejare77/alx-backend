@@ -64,8 +64,9 @@ class Server:
 
         total_pages = math.ceil(length_of_dataset / page_size)
 
-        if not data:
-            data_set['page_size'] = 0
+        data_set['page_size'] = len(data)
+        # if not data:
+        #     data_set['page_size'] = 0
 
         if (page < total_pages):
             data_set['next_page'] = page + 1
