@@ -5,16 +5,6 @@ import math
 from typing import List
 
 
-def index_range(page, page_size):
-    """returns a tuple of size two containing a start index and an
-    end index corresponding to the range of indexes to return in
-    a list of those particular pagination parameters
-    """
-    offset = (page - 1) * page_size
-    current_page_size = offset + page_size
-    return (offset, current_page_size)
-
-
 class Server:
     """Server class to paginate a database of popular baby names"""
     DATA_FILE = "Popular_Baby_Names.csv"

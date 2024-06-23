@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Simple Pagination"""
+"""Hypermedia Pagination"""
 import csv
 import math
-from typing import List
+from typing import List, Dict
 
 
 class Server:
@@ -41,7 +41,7 @@ class Server:
                 result.append(dataset[i])
         return result
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> List[list]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
         """returns a dictionary containing the following key-value paris
         page_size: the length of the returned dataset page
         page: the current page number
