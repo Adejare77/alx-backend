@@ -5,7 +5,7 @@ from base_caching import BaseCaching
 
 
 class MRUCache(BaseCaching):
-    """ Caching System using LIFO algorithm """
+    """ Caching System using MRU algorithm """
 
     def __init__(self):
         super().__init__()
