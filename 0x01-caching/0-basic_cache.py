@@ -2,6 +2,7 @@
 """ Basic Dictionary """
 from base_caching import BaseCaching
 
+
 class BasicCache(BaseCaching):
     """ Caching system. This system has no limit """
 
