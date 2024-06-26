@@ -41,7 +41,6 @@ class LFUCache(BaseCaching):
         # After deleting, re-add. Thus moves to the last item in cache
         self.key_freq[key] = freq_value
 
-
     def get(self, key):
         """ Get an item by key """
         if not (key and self.cache_data.get(key)):
