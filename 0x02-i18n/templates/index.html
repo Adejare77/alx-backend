@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ home_title }}</title>
+    </head>
+    <body>
+        <h1>{{ home_header }}</h1>
+        {% if user %}
+            <p>{{ _('logged_in_as', username=user) }}</p>
+        {% else %}
+        <p>{{ _('not_logged_in') }}
+        {% endif %}
+        <p>{{ _('current_time_is', current_time=current_time)}}
+    </body>
+</html>
