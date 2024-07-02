@@ -69,15 +69,13 @@ def get_timezone():
     if request.args.get('timezone'):
         zone = request.args.get('timezone')
     elif g.user_timezone:
-        zone = g.user
-    else:
-        zone = app.config["BABEL_DEFAULT_TIMEZONE"]
-
+        zone = g.user_timezone
     try:
         timezone(zone)
-        return zone
     except pytz.exceptions.UnknownTimeZoneError:
-        return app.config["BABEL_DEFAULT_TIMEZONE"]
+        zone = app.config["BABEL_DEFAULT_TIMEZONE"]
+
+    return zone
 
 
 @app.route('/')
