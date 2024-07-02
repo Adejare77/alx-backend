@@ -64,9 +64,9 @@ def index():
     """ index page """
     home_title = _('home_title')  # MessageID is enclose in ()
     home_header = _('home_header')
-    return render_template('5-index.html', home_header=home_header,
+    return render_template('6-index.html', home_header=home_header,
                            home_title=home_title, user=g.user)
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
