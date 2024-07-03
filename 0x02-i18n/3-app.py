@@ -26,10 +26,9 @@ def get_locale():
 @app.route('/')
 def index():
     """ index page """
-    home_title = _('home_title')  # MessageID is enclose in ()
-    home_header = _('home_header')
-    return render_template('3-index.html', home_header=home_header,
-                           home_title=home_title)
+    # home_title = _('home_title')  # MessageID is enclose in ()
+    # home_header = _('home_header')
+    return render_template('3-index.html')
 
 
 if __name__ == '__main__':
