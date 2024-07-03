@@ -81,13 +81,10 @@ def get_timezone():
 @app.route('/')
 def index():
     """ index page """
-    home_title = _('home_title')  # MessageID is enclose in ()
-    home_header = _('home_header')
     tz = get_timezone()
     current_time = datetime.now(timezone(tz))
     fmtd_date = format_datetime(current_time, format='MMM dd, yyyy, h:mm:ss a')
-    return render_template('index.html', home_header=home_header,
-                           home_title=home_title, user=g.user,
+    return render_template('index.html', user=g.user,
                            current_time=fmtd_date)
 
 
